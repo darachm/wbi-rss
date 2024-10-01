@@ -90,7 +90,7 @@ def __(datetime, parsed_episodes, podgen):
                             title=x['title'],
                             long_summary=x['description'],
                             link=x['episode-page-url'],
-                            #publication_date=x['date'],
+                            publication_date=datetime.datetime.strptime(x['date']+' -0400','%Y-%m-%d %z'),
                             media=podgen.Media(
                                     url=x['url'],
                                     duration=datetime.timedelta(seconds=float(x['duration-seconds']))
