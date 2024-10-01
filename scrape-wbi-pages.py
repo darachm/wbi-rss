@@ -91,6 +91,7 @@ def __(datetime, parsed_episodes, podgen):
                             long_summary=x['description'],
                             link=x['episode-page-url'],
                             publication_date=datetime.datetime.strptime(x['date']+' -0400','%Y-%m-%d %z'),
+                            image='https://americanassembly.org/files/content/v1/5cb1ec93a56827157ef5d749/1596142466143-zj771zif7v3mv75hbxwa/image-asset.jpg',
                             media=podgen.Media(
                                     url=x['url'],
                                     duration=datetime.timedelta(seconds=float(x['duration-seconds']))
